@@ -1,13 +1,91 @@
-# 环境变量
+# ── 环境变量（含敏感密钥，严禁提交）─────────────────────
 .env
+.env.local
+.env.*.local
+*.env
 
-# Python
+# ── Python ─────────────────────────────────────────────
 __pycache__/
 *.py[cod]
+*$py.class
+*.so
+*.egg
 *.egg-info/
+.eggs/
 dist/
 build/
+develop-eggs/
+sdist/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+inst.cfg
+MANIFEST
 
-# 虚拟环境
+# ── 虚拟环境 ───────────────────────────────────────────
 .venv/
 venv/
+env/
+ENV/
+.python-version
+
+# ── 测试 / 覆盖率 ─────────────────────────────────────
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+.hypothesis/
+
+# ── 类型检查 / Lint 缓存 ───────────────────────────────
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.pytype/
+.dmypy.json
+
+# ── Jupyter ────────────────────────────────────────────
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# ── IDE / 编辑器 ──────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+*.sublime-project
+*.sublime-workspace
+
+# ── 操作系统 ───────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# ── 日志 / 运行时输出 ─────────────────────────────────
+*.log
+logs/
+log/
+*.pid
+
+# ── 项目运行产物 ──────────────────────────────────────
+# app.py 会生成旅行规划方案文件，不应入库
+travel_plan_*.md
+travel_plan_*.txt
+travel_plan_*.html
+
+# ── 其它 ───────────────────────────────────────────────
+.cache/
+.tmp/
+tmp/
+*.bak
